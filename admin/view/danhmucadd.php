@@ -6,7 +6,8 @@
         Thêm Danh Mục
     </h3>
 
-    <form class="addPro" action="admin.php?pg=adddanhmuc" onsubmit="return send()" method="POST" enctype="multipart/form-data">
+    <form class="addPro" action="admin.php?pg=adddanhmuc" onsubmit="return send()" method="POST"
+        enctype="multipart/form-data">
         <div class="form-group">
             <label for="name">Tên Danh Mục:</label>
             <input type="text" class="form-control" name="name" id="name" placeholder="Nhập tên Danh Mục">
