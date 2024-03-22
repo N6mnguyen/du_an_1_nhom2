@@ -91,8 +91,6 @@ $html_cart = viewcart();
     }
 
     /* soluongdonhang */
-
-
     .quantity-btn {
         cursor: pointer;
         background-color: #4caf50;
@@ -100,7 +98,6 @@ $html_cart = viewcart();
         border: none;
         
     }
-
     .total-amount {
         min-width: 120px;
         /* Adjust the width as needed */
@@ -109,9 +106,7 @@ $html_cart = viewcart();
     .quantity button{
         width: 20px;
     }
-    
 </style>
-
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var quantityButtons = document.querySelectorAll('.quantity-btn');
@@ -130,7 +125,6 @@ $html_cart = viewcart();
 
             formData.append('productId', productId);
             formData.append('action', action);
-
             xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     var response = JSON.parse(xhr.responseText);
