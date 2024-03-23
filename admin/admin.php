@@ -77,7 +77,6 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                     if (isset($_POST['bestseller'])) {
                         $bestseller = $_POST['bestseller'];
                     }
-
                     if ($imgs['name'][0] != '') {
                         foreach ($imgold as $b) {
                             extract($b);
@@ -99,7 +98,6 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                     sanpham_update($name, $price, $iddm, $id, $mota, $imgs['name'], $bienthe, $size, $tien, $imgold, $bestseller);
                     header("Location:admin.php?pg=sanphamlist");
                 }
-
                 break;
             case "sanphamadd":
                 $danhmuclist = danhmuc_all();
@@ -138,8 +136,6 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                             unlink($img);
                         }
                     }
-
-
                     try {
                         sanpham_delete($id);
                         header("Location:admin.php?pg=sanphamlist");
