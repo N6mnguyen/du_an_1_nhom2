@@ -1,9 +1,6 @@
 <?php
 require_once 'pdo.php';
 require 'global.php';
-
-
-
 function sanpham_insert($name, $price, $iddm, $imgs, $size, $tien, $mota,$bestseller)
 {
     $i = 0;
@@ -41,11 +38,8 @@ function sanpham_update($name, $price, $iddm, $id, $mota, $imgs, $idbienthe, $si
     $i = 0;
     $j = 0;
     $d = 10;
-
     $sql = "UPDATE sanpham SET name = ?, price = ?,bestseller=?, iddm = ?, mota = ? WHERE id = ?";
     pdo_execute($sql, $name, $price,$bestseller, $iddm, $mota, $id);
-
-
     $sql2 = "UPDATE hinhsanpham SET ten_hinh = ? WHERE ma_hinh = ?";
     $sql6 = "DELETE FROM hinhsanpham WHERE ma_hinh=?";
     $sql7 = "INSERT INTO hinhsanpham(ten_hinh, masp) VALUES (?,?)";
