@@ -1,12 +1,12 @@
-<?php 
-$hh= show_thong_kebl($tk_bl);
+<?php
+$hh = show_thong_kebl($tk_bl);
 ?>
 <div class="main-content">
     <h3 class="title-page">Quản lí bình luận:</h3>
 
     <table id="example" class="table table-striped" style="width: 100%">
         <thead>
-            <tr>
+               <tr>
                 <th>MÃ SẢN PHẨM</th>
                 <th>HÌNH ẢNH</th>
                 <th>TÊN SẢN PHẨM</th>
@@ -21,16 +21,16 @@ $hh= show_thong_kebl($tk_bl);
             ?>
         </tbody>
     </table>
-   
+
     <?php
     for ($i = 1; $i <= $total_pages; $i++) {
         ?>
         <button class="phantrang"><a class="nutphantrang" href='admin.php?pg=binhluanlist&page=<?= $i ?>'>
-            <?= $i ?>
-        </a> </button>
-    <?php
+                <?= $i ?>
+            </a> </button>
+        <?php
     } ?>
-   
+
 </div>
 </div>
 </div>
