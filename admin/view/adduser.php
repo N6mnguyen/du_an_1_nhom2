@@ -7,7 +7,6 @@ if (is_array($us) && (count($us) > 0)) {
     <h3 class="title-page">
         Quyền user:
     </h3>
-
     <form class="addPro" action="admin.php?pg=addrole" method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label for="categories">Danh mục:</label>
