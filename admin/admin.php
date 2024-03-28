@@ -143,7 +143,6 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                         echo "<h3 style='color:red;text-align:center;' >Sản phẩm đã có trong giỏ hàng !!! không được phép xoá</h3>";
                     }
                 }
-
                 break;
             case "addproduct":
                 if (isset($_POST['addproduct'])) {
