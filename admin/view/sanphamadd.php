@@ -66,7 +66,6 @@ $html_danhmuclist = showdm_admin($danhmuclist);
         <div class="form-group">
             <button type="submit" name="addproduct" class="btn btn-primary">Thêm sản phẩm</button>
         </div>
-
     </form>
 </div>
 
