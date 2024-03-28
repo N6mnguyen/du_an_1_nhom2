@@ -5,7 +5,6 @@ $html_danhmuclist = showdm_admin($danhmuclist);
     <h3 class="title-page">
         Thêm sản phẩm
     </h3>
-
     <form action="admin.php?pg=addproduct" onsubmit="return send()" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="exampleInputFile">Ảnh sản phẩm</label>
