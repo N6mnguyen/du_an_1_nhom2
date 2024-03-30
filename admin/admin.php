@@ -404,39 +404,7 @@ if (isset($_SESSION['user']) && ($_SESSION['user']["role"] == 1)) {
                 include("view/home.php");
                 break;
         }
-    } else {
-        $thongke_doanhthu_theo_danhmuc = thong_ke_hang_hoa();
-        $label = "";
-        $trungbinh = "";
-        $minprice = "";
-        $maxprice = ""; //
-        foreach ($thongke_doanhthu_theo_danhmuc as $key => $value) {
-            $label .= "'" . $value['tendm'] . "', ";
-            $trungbinh .= $value['avgPrice'] . ', ';
-            $maxprice .= $value['maxPrice'] . ', ';
-            $minprice .= $value['minPrice'] . ', ';
-        }
-
-        $label = rtrim($label, ", ");
-        $label = "[" . $label . "]";
-
-        $trungbinh = "{name: 'Giá trung bình', data: [" . rtrim($trungbinh, ', ') . "]}";
-        $minprice = "{name: 'Giá thấp nhất', data: [" .  rtrim($minprice, ', ') . "]}";
-        $maxprice =  "{name: 'Giá cao nhất', data: [" . rtrim($maxprice, ', ') . "]}";
-
-        $soluong="";
-        $tensp="";
-        $thong_ke_sp_ban_chay=tk_sp_bc();
-        foreach($thong_ke_sp_ban_chay as $value){
-            $tensp.="'".$value['TenSanPham']."',";
-            $soluong.=$value['TongSoLuong'].",";
-        }
-        $soluong = rtrim($soluong, ", ");
-        $soluong = "[" . $soluong . "]";
-        $tensp = rtrim($tensp, ", ");
-        $tensp = "[" . $tensp . "]";
-        include("view/home.php");
-    }
+    } 
     include("view/footer.php");
 } else {
     header('location:login.php');
