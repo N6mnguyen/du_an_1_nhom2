@@ -1,3 +1,20 @@
+<?php
+if (isset($_SESSION['s_user']) && ($_SESSION['s_user'] > 0)) {
+    extract($_SESSION['s_user']);
+    $kiempass = kiemtraemail($email);
+    // print_r($kiempass);
+}
+
+if (isset($_POST['submit'])) {
+    $password = $_POST['oldPassword'];
+    $newPassword = $_POST['newPassword'];
+    $confirmPassword = $_POST['confirmPassword'];
+    $newPassword == updatepassword($newPassword, $id);
+    $thongbao1 = "Cập nhật mật khẩu thành công";
+}
+
+?>
+
 <div class="containerfull">
     <div class="bgbanner">Thay đổi mật khẩu</div>
 </div>
@@ -70,3 +87,27 @@
         }
     </style>
 </section>
+<script>
+    function send() {
+        var count = 0
+        if (document.querySelector('.matkhau').value == '') {
+            count++
+        } else if (document.querySelector('.matkhau').value != document.querySelector('.oldmk').value) {
+            alert(document.querySelector('.oldmk').value)
+            count++
+            document.querySelector('h3.matkhau-error').textContent = 'Mật khẩu cũ sai!';
+        }
+        if (document.querySelector('.matkhaumoi').value == '') {
+            count++
+        }
+        if (document.querySelector('.xnmatkhau').value == '') {
+            count++
+        } else if (document.querySelector('.xnmatkhau').value != document.querySelector('.matkhaumoi').value) {
+            count++
+            document.querySelector('h3.xnmk-error').textContent = 'Mật khẩu nhập lại không đúng!';
+        }
+        if (count > 0) {
+            return false;
+        }
+    }
+</script>
