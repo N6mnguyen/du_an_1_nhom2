@@ -1,3 +1,16 @@
+<?php
+if (isset($_SESSION['s_user']) && ($_SESSION['s_user'] > 0)) {
+    extract($_SESSION['s_user']);
+}
+
+$erro = '';
+
+if (isset($_SESSION['error_email']) && ($_SESSION['error_email'] != "")) {
+    $erro =  $_SESSION['error_email'];
+    unset($_SESSION['error_email']);
+}
+?>
+
 <div class="containerfull">
     <div class="bgbanner">Cập Nhật Tài Khoản</div>
 </div>
@@ -88,3 +101,69 @@
         }
     </style>
 </section>
+
+<script>
+    function checkImageFormat(fileInput) {
+        alert(fileInput)
+        if (fileInput.files && fileInput.files[0]) {
+            var fileName = fileInput.files[0].name;
+            var fileExtension = fileName.split('.').pop().toLowerCase();
+            alert(fileExtension)
+
+            if (fileExtension === 'jpg' || fileExtension === 'jpeg' || fileExtension === 'png' || fileExtension === 'webp') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    function send() {
+
+        var count = 0
+        if (checkImageFormat(document.getElementById('image')) == false) {
+            document.querySelector('h3.image-error').innerText = 'Định dạng hình ảnh không hợp lệ. Vui lòng chọn hình ảnh có định dạng .jpg, .png, .webp hoặc .jpeg!';
+            count++
+        } else {
+            document.querySelector('h3.image-error').innerText = ''
+        }
+        if (isValidPhoneNumber(document.querySelector('.sdt').value) == false) {
+            document.querySelector("h3.sdt-error").textContent = "Số điện thoại từ 9 đến 10 số bắt đầu từ 0!";
+            count++
+        }
+        if (document.querySelector('.sdt').value == '') {
+            count++
+        }
+        if (document.querySelector('.names').value == '') {
+            count++
+        }
+        if (document.querySelector('.email').value == '') {
+            count++
+        } else if (!isValidEmail(document.querySelector('.email').value)) {
+            document.querySelector("h3.email-error").textContent = "Email không đúng định dạng!";
+            count++;
+        }
+        if (count > 0) {
+
+            return false;
+        }
+    }
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+
+    function isValidPhoneNumber(phoneNumber) {
+        phoneNumber = phoneNumber.trim();
+        if (phoneNumber.startsWith('+84') || phoneNumber.startsWith('0')) {
+            const numericPart = phoneNumber.replace(/\D/g, '');
+            if (numericPart.length === 9 || numericPart.length === 10) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+</script>
