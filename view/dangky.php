@@ -7,8 +7,8 @@ if (isset($_SESSION['error_email']) && ($_SESSION['error_email'] != "")) {
 }
 ?>
 <div class="containerfull">
-    <div class="bgbanner">ĐĂNG KÝ TÀI KHOẢN</div>
-</div>
+<!--     <div class="bgbanner">ĐĂNG KÝ TÀI KHOẢN</div>
+</div> -->
 
 <section class="containerfull">
     <div class="container">
