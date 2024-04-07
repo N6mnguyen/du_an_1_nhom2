@@ -5,7 +5,7 @@
     else  $title ="Sản Phẩm";
 ?>
 <div class="containerfull">
-    <div class="bgbanner"><?=$title?></div>
+<!--     <div class="bgbanner"><?=$title?></div> -->
 </div>
 
 <section class="containerfull">
