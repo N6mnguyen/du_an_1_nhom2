@@ -40,11 +40,6 @@ if (isset($_SESSION['giohang'])) {
 }
 
 ?>
-<div class="containerfull">
-    <div class="bgbanner">ĐƠN HÀNG</div>
-</div>
-
-
 <div class="container">
     <div class="uu">
         <div class="xndh">
@@ -96,28 +91,7 @@ if (isset($_SESSION['giohang'])) {
 
                                 </div>
                             </li>
-                            <li class="">
-                                <div class="pay">
-                                    <input type="radio" name="pttt" id="2" class="" value="2" />
 
-
-                                    <img width="40px" src="https://minio.thecoffeehouse.com/image/admin/1690094645_362961302-6516710751684191-4996740142959914656-n.png" alt="" />
-                                    </span>
-                                    <span class="text">VNPAY</span>
-
-                                </div>
-                            </li>
-                            <li class="">
-                                <div class="pay">
-                                    <input type="radio" name="pttt" id="3" class="" value="3" />
-
-                                    <span>
-                                        <img width="40px" src="https://minio.thecoffeehouse.com/image/tchmobileapp/386_ic_momo@3x.png" alt="" />
-                                    </span>
-                                    <span class="text">MOMO</span>
-
-                                </div>
-                            </li>
                         </ul>
                     </div>
             </div>
