@@ -9,7 +9,7 @@ $html_dssp_banhmi=showsp($dssp_banhmi);
 ?>
 
 <div class="containerfull">
-    <div class="bgbanner">TRANG CHỦ</div>
+<!--     <div class="bgbanner">TRANG CHỦ</div> -->
 </div>
 <section class="containerfull">
     <div class="container">
