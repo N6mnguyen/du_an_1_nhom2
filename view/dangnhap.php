@@ -2,7 +2,7 @@
 
 ?>
 <div class="containerfull">
-    <div class="bgbanner">ĐĂNG NHẬP</div>
+<!--     <div class="bgbanner">ĐĂNG NHẬP</div> -->
 </div>
 
 <section class="containerfull">
