@@ -4,7 +4,7 @@
 ?>
 
 <div class="containerfull">
-    <div class="bgbanner">Danh Mục</div>
+<!--     <div class="bgbanner">Danh Mục</div> -->
 </div>
 
 <section class="containerfull bg1 padd50">
