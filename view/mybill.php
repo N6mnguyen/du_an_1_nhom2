@@ -9,7 +9,7 @@ $html_cart=  show_donhang_user($bill);
 ?>
 
 <div class="containerfull">
-    <div class="bgbanner">Đơn Hàng</div>
+<!--     <div class="bgbanner">Đơn Hàng</div> -->
 </div>
 
 <section class="containerfull">
