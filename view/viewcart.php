@@ -3,7 +3,7 @@ $html_cart = viewcart();
 ?>
 
 <div class="containerfull">
-    <div class="bgbanner">Giỏ Hàng</div>
+<!--     // <div class="bgbanner">Giỏ Hàng</div> -->
 </div>
 <section class="containerfull">
     <div class="container">
